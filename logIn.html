@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: radial-gradient(circle, #F48FB1, #F06292, #EC407A, #E91E63);
+            transition: background 1s ease-in-out;
+            color: white; /* Set text color to white */
+        }
+
+        table {
+            background-color: rgba(255, 255, 255, 0.2); /* Lighter background color for table */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table tr td {
+            padding: 8px;
+        }
+
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+            background-color: transparent; /* Transparent background */
+            color: white; /* Set text color to white */
+            caret-color: white; /* Set caret color to white */
+        }
+
+        input[type="password"]::placeholder {
+            color: rgba(255, 255, 255, 0.8); /* Lighter placeholder text color */
+        }
+
+        td.note {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8); /* Lighter note color */
+        }
+
+        input[type="button"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #FF4081; /* New color */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="button"]:hover {
+            background-color: #FF80AB; /* New color on hover */
+        }
+        #error {
+            color: #FF4081; /* New color for error message */
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr><td>Enter Password:</td></tr>
+        <tr><td><input type="password" name="password" id="password"></td></tr>
+        <tr><td class="note">Note: password is my birthday (Ex: 12/02/2000)</td></tr>
+        <tr><td><input type="button" name="submit" id="submit" value="Login" onclick="logIn()"></td></tr>
+        <tr id="errorRow"><td id="error" style="color: red;"></td></tr>
+    </table>
+
+    <script>
+        function changeBackground() {
+            const colors = ['#F48FB1', '#F06292', '#EC407A', '#E91E63'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.background = `radial-gradient(circle, ${randomColor})`;
+        }
+
+        setInterval(changeBackground, 1000); // Change background every 5 seconds
+
+        function logIn() {
+            const correctPass = "23/07/2003";
+            var userInput = document.getElementById("password");
+            var userInputPass = userInput.value;
+            
+            if (userInputPass === correctPass) {
+                window.location = 'home.html';
+            } else {
+                const errorText = document.getElementById("error");
+                errorText.textContent = "Incorrect password. Please try again.";
+                userInput.value = ""; // Clear the input field
+            }
+        }
+    </script>
+</body>
+</html>
