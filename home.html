@@ -1,98 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <style>
-        body{
-            background-color: #FFFAF4;
+        body {
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle, #F48FB1, #F06292, #EC407A, #E91E63); /* Background gradient */
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: white; /* Text color */
         }
-        .nav_bar{
+        
+        .nav_bar {
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
             justify-content: space-between;
-        }
-        .slogan{
-            justify-items: center;
+            padding: 15px;
             align-items: center;
+        }
+        
+        .slogan {
             width: 150px;
             color: lightpink;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
         }
-        .tym_icon img{
+        
+        .tym_icon img,
+        .lotso_huggin_bear img {
             width: 60px;
             height: 60px;
         }
-        .lotso_huggin_bear img{
-            width: 60px;
-            height: 60px;
-        }
-        .banner img{
+        
+        .banner img {
             width: 100%;
             height: 528px;
         }
-        .content{
-            display:flex;
+        
+        .content {
+            display: flex;
         }
-        .float_left{
-            float: left;
-        }
-        .float_left ul{
+        
+        .float_left ul {
             list-style-type: none;
-            margin:0;
+            margin: 0;
             padding: 0;
-            background-color: rgb(250, 170, 183, 0.5);
+            background-color: rgba(250, 170, 183, 0.5);
             height: 440px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            justify-items: center;
+            align-items: center;
         }
-        .float_left ul li{
+        
+        .float_left ul li {
             background-color: #E08E6D;
             width: 250px;
             height: 60px;
-            padding-top: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
         }
-        .float_left ul li a{
+        
+        .float_left ul li a {
             text-decoration: none;
             color: white;
-            justify-items: center;
             font-weight: bold;
-            align-items: center;
-            margin: 66px;
-            padding: 20px;
+            padding: 15px;
         }
-        .float_right{
+        
+        .float_right {
             width: 100%;
-            padding: 0 30px 0 30px;
+            padding: 0 30px;
         }
-        .float_right h1{
+        
+        .float_right h1 {
             color: #F6C391;
-            justify-items: center;
-            margin-left: 410px;
+            font-size: 24px;
+            margin-bottom: 20px;
         }
-        .float_right img{
-            margin-left: 57px;
+        
+        .float_right img {
             width: 110px;
             height: 140px;
+            margin: 0 0 20px 0;
+        }
+        
+        .float_right p {
+            margin-bottom: 10px;
         }
     </style>
 </head>
+
 <body>
     <!-- navigation bar start -->
     <div class="nav_bar">
         <div class="slogan">
-            CV apply to Thao's boyfriend position
+            CV apply to Nhi's boyfriend position
         </div>
         <div class="tym_icon">
             <img src="img/heart.png" alt="heart">
         </div>
         <div class="lotso_huggin_bear">
-            <img src="https://down-aka-vn.img.susercontent.com/7fb661d31468b6f933a4ee79835cce6c_tn" alt="lotso_huggin_bear">
+            <img src="https://down-aka-vn.img.susercontent.com/7fb661d31468b6f933a4ee79835cce6c_tn"
+                alt="lotso_huggin_bear">
         </div>
     </div>
     <!-- navigation bar end -->
@@ -109,24 +125,27 @@
             <ul>
                 <li> <a href="home.html">Home</a> </li>
                 <li> <a href="aboutMe.html">About Me</a> </li>
-                <li> <a href="commitment.html">Commitment</a> </li>
+                <li> <a href="sendFB.html">Send FB</a> </li>
             </ul>
         </div>
         <!-- float left end -->
-        
+
         <!-- float right start -->
         <div class="float_right">
             <h1>Welcome to my CV</h3>
-            <h3>From: Pham Thanh</h3>
-            <img src="img/avatar.jpg" alt="avatar">
-            <p>Dân tộc: Kinh.&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp23/07/2003</p>
-            <p> Sơ yếu lý lịch: <a href="img/resume.jpg"> View Link </a> </p>
-            <p>Nơi ở hiện tại: Số 9, tổ 17, phường Ngọc Thụy, quận Long Biên, Hà Nội</p>
-            <p>Quê quán: Thái Bình</p>
-<!--             <h3>To: .-.'s Admintrator Council</h3> -->
+                <h3>From: Pham Thanh</h3>
+                <img src="img/avatar.jpg" alt="avatar">
+                <p>Dân tộc:
+                    Kinh.&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp23/07/2003
+                </p>
+                <p> Sơ yếu lý lịch: <a href="img/resume.jpg"> View Link </a> </p>
+                <p>Nơi ở hiện tại: Số 9, tổ 17, phường Ngọc Thụy, quận Long Biên, Hà Nội</p>
+                <p>Quê quán: Thái Bình</p>
+                <!--             <h3>To: .-.'s Admintrator Council</h3> -->
         </div>
         <!-- float right end -->
     </div>
-    
+
 </body>
+
 </html>
