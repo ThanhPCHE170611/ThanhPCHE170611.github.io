@@ -138,7 +138,7 @@
             <table>
                 <tr>
                     <td>From:</td>
-                    <td>Ha Yen Nhi</td>
+                    <td>Phạm Anh Minh</td>
                 </tr>
                 <tr>
                     <td>To: </td>
@@ -169,7 +169,7 @@
                     </td>
                 </tr>
                 <tr id="errorRow">
-                    <td id="error" style="color: red; font-weight: bold;"></td>
+                    <td id="error" style="color: rgb(10, 246, 37); font-weight: bold;"></td>
                 </tr>
             </table>
         </div>
@@ -184,15 +184,15 @@
             if (verify.checked && contentText != "") {
                 Email.send({
                     SecureToken: "7512aa3e-9263-4997-9fcc-3f8e7ac055f3",
-                    To: 'hhayennhi0312@gmail.com',
+                    To: 'tpc23072003@gmail.com, phamanhminhvblc@gmail.com',
                     From: "thanhpche170611@fpt.edu.vn",
                     Subject: "[COPY OF THE FEEDBACK]",
                     Body: contentText,
                 });
                 const errorText = document.getElementById("error");
-                errorText.textContent = "Email Sent. Please close the tab!";
+                errorText.textContent = "Email Sent. Now text me. Please wait the website to redirect!";
                 setTimeout(function () {
-                    window.location = 'https://www.instagram.com/direct/';
+                    window.location = 'https://www.facebook.com/messages/t/thanh.318';
                 }, 10000);
                 ;
             } else {
